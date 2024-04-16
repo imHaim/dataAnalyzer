@@ -1,36 +1,38 @@
-document.addEventListener("DOMContentLoaded", function() {
-  let question; // Use camelCase for JavaScript variable names
-  let databaseName;
-  let taskName;
-  let items = [];
+<!DOCTYPE html>
+<html lang="en">
 
-  document.getElementById("Submit").onclick = function () {
-      question = document.getElementById("question").value;
-      databaseName = document.getElementById("databaseName").value;
-      taskName = document.getElementById("taskName").value;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-      items.length = 0; // Clears previous entries to store new ones
-      items.push(question, databaseName, taskName);
-      document.getElementById("handle").textContent = "[" +items.join(", ")+ "]";
+<body>
+    <div id="container">
+        <h1>AI Data Analyzer</h1>
 
-      console.log(items);
+        <div id="inputs">
+            <input type="text" placeholder="Question" id="question">
+            <select id="databaseName">
+                <option value="">Select a Database</option> <!-- Default placeholder option -->
+                <option value="database1">Database 1</option>
+                <option value="database2">Database 2</option>
+                <option value="database3">Database 3</option>
+                <option value="database4">Database 4</option>
+                <!-- Add more options as needed -->
+            </select>
+            <input type="text" placeholder="Task Name" id="taskName">
+        </div>
+        <div>
+            <button id="Submit"> Submit </button>
+            <button id="reset"> Reset </button>
+            <input type="file" id="Upload"> </input>
+        </div>
+        <p id="handle">The array submitted will appear here </p>
+        <p id="response">Response from AI </p>
+        <script src="index.js"></script>
+    </div>
+</body>
 
-      // Clearing input fields after submitting
-      document.getElementById("question").value = '';
-      document.getElementById("databaseName").value = '';
-      document.getElementById("taskName").value = '';
-  };
-
-  document.getElementById("Upload").onclick = function () {
-      // Define upload functionality here
-      console.log('Upload button clicked');
-  };
-
-  document.getElementById("reset").onclick = function () {
-      document.getElementById("handle").textContent = '';
-      document.getElementById("question").value = '';
-      document.getElementById("databaseName").value = '';
-      document.getElementById("taskName").value = '';
-      console.log('Reset executed');
-  };
-});
+</html>
