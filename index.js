@@ -34,4 +34,3 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log('Reset executed');
   };
 });
-</html>
