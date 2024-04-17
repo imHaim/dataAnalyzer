@@ -1,59 +1,158 @@
-body{
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    min-height: 100vh; /* Ensure it's at least as tall as the viewport */
-    font-family: Arial, sans-serif;
-    margin: 0;
+
+* {
     padding: 0;
-    background-color: #cecdcd;
-    background-image: url("https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?t=st=1713307421~exp=1713311021~hmac=4134f1b972591dcd4c573143edbf2fb2e0a49897706ad4a26a09366dcb03e173&w=1380");
-    background-size: cover;
+    margin: 0;
+    font-family: 'Poppins', 'Arial', sans-serif;
 }
+
+
 #container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 50%;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f2f2f2;
-
-
+    height: 100vh;
+    width: 100%;
+    background-image: url("/wallpaper2.png");
+     background-size: cover;
+     background-repeat: no-repeat;
 }
-h1{
-color: #333;
-font-size: 32px;
-font-weight: bold;
-text-transform: uppercase;
+
+.content {
+    width: 40%;
+}
+
+
+.form {
+    display: flex;
+   background-color:rgba(255,255,255,0.2);
+    border-radius: 30px;
+    border: solid rgba(255,255,255,0.18) 1px;
+     z-index: -1;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+     backdrop-filter: blur(10px);
+     -webkit-backdrop-filter: blur(10px);
+     justify-content: center;
+     align-items: center;
+     padding-top: 5%;
+     padding-bottom: 5%;
+}
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.form-content {
+    width: 80%;
+}
+
+.form-content  > h1{
+color: #ffffff;
+font-size: 40px;
+font-weight: 500;
 text-align: center;
-margin-bottom: 20px;
+letter-spacing: 1px;
+ text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
-h2{
-    margin: 50px auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f2f2f2;
 
 
-}
-button {
-        margin-top: 40px;
-        padding: 10px 20px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
+#input-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
         border-radius: 4px;
+        box-sizing: border-box;
+        padding-top: 2%;
+    }
+
+ #question{
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 100px;
+        box-sizing: border-box;
+         box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    }
+
+    .second-input-row {
+        display: flex;
+        column-gap: 5%;
+        width: 100%;
+    }
+
+    .select-row {
+        width: 50%;
+        
+    }
+
+    #databaseName {
+        width: 100%; /* Same width as your input fields */
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 100px;
+        box-sizing: border-box;
+        background-color: white;
         cursor: pointer;
-        font-size: 16px;
+         box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+        }
+
+        #taskName {
+        width: 50%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 100px;
+        box-sizing: border-box;
+         box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+        }
+    .upload {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #8F9EF4;
+        border-radius: 100px;
+        box-sizing: border-box;
+        box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+        text-align: center;
+    } 
+
+input#file-upload-button {
+    background-color: rgba(0,0,0,0.2) !important;
+    padding: 50px !important;
+}
+  .submit-row {
+    display: flex;
+    column-gap: 5%;
+  }
+    #Submit {
+        width: 50%;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #00013A;
+        color: white;
+        border-radius: 100px;
+        box-sizing: border-box;
+        box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+        text-align: center; 
+         cursor: pointer;
+    }
+
+    #reset {
+         width: 50%;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: rgba(0,0,0,0);
+        color: white;
+        border-radius: 100px;
+        box-sizing: border-box;
+        box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+        text-align: center; 
+        cursor: pointer;
     }
 
 button:hover {
@@ -64,37 +163,11 @@ button:active {
         background-color: #3e8e41;
     }
 
-    #inputs{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
+    #handle {
+        display: none;
     }
- input{
-        width: 50%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-    select {
-        width: 50%; /* Same width as your input fields */
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        background-color: white;
-        cursor: pointer;
-    }
-
     #response{
+        display: none;
         width: 70%;
         padding: 10px;
         margin: 10px 0;
@@ -105,3 +178,25 @@ button:active {
         color: #cecdcd;
        
     }
+
+    @media screen and (max-width: 1280px) {
+        .content {
+    width: 70%; }
+}
+
+@media screen and (max-width: 700px) {
+        .content {
+    width: 90%;
+}
+.second-input-row {
+     flex-direction: column !important;
+}
+
+.select-row {
+    width: 100%;
+}
+
+#taskName {
+    width: 100%;
+}
+}
