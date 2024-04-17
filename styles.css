@@ -95,12 +95,13 @@ button:active {
     }
 
     #response{
-        width: 50%;
+        width: 70%;
         padding: 10px;
         margin: 10px 0;
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
         background-color: white;
+        color: #cecdcd;
        
     }
