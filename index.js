@@ -29,13 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
         throw new Error('Network response was not ok');
       }
       return response.json();
-    })
-    .then(data => {
+        })
+        .then(data => {
       console.log(data);
       document.getElementById("response").style.display = "block";
-      document.getElementById("response").textContent = "Data received successfully!";
-    })
-    .catch(error => {
+      document.getElementById("response").textContent = data.message;
+        })
+        .catch(error => {
       console.error('Error:', error);
       document.getElementById("response").style.display = "block";
       document.getElementById("response").textContent = "Error: Could not send data.";
