@@ -12,16 +12,15 @@ document.addEventListener("DOMContentLoaded", function () {
     items.length = 0; // Clears previous entries to store new ones
     items.push(question, databaseName, taskName);
     document.getElementById("handle").textContent = "[" + items.join(", ") + "]";
-  
     console.log(items);
     // Show loading indicator (example)
     document.getElementById("loading").style.display = "block";
-  
+
     // Sending the data to the server
-    fetch('96.20.87.48:5000', {
+    fetch('http://96.20.87.48:5000/receive_data', {  // Include protocol and full route
       method: 'POST',
       headers: {
-          'Content-Type': 'application/json',
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({question: question, databaseName: databaseName, taskName: taskName})
     })
@@ -49,11 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("databaseName").value = "";
       document.getElementById("taskName").value = "";
     });
-  };
-
-  document.getElementById("Upload").onclick = function () {
-    // Define upload functionality here
-    console.log("Upload button clicked");
+    document.getElementById("Upload").onclick = function () {
+      // Define upload functionality here
+      console.log("Upload button clicked");
+    };
   };
 
   document.getElementById("reset").onclick = function () {
