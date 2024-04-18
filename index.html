@@ -12,19 +12,14 @@
 </head>
 
 <body>
-    <div id="container" style ="
-    background-image: url('wallpaper2.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-
-">
+    <div id="container">
        <div class="content">
         <div class="form">
             <div class="form-content">
-                <div class="logo"><img src="logo_placeholder.png" alt="Company Logo" width="90px"></div>
+                <div class="logo"><img src="/logo_placeholder.png" alt="Company Logo" width="90px"></div>
                 <h1>Company Name</h1>
 
-                <div id="input-container" >
+                <div id="input-container">
                     <input type="text" placeholder="Search..." id="question">
                     <div class="second-input-row">
                         <div class="select-row">
@@ -51,6 +46,7 @@
                     
                 </div>
                 <p id="handle">The array submitted will appear here </p>
+                <p id="loading" style="display:none;">Loading...</p> <!-- Loading indicator -->
                 <p id="response">Response from AI </p>
             </div>
         </div>
@@ -60,4 +56,3 @@
 </body>
 
 </html>
-
