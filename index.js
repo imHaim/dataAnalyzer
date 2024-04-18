@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("loading").style.display = "block";
 
     // Sending the data to the server
-    fetch('http://96.20.87.48:5000/receive_data', {  // Include protocol and full route
+    fetch('https://96.20.87.48:5000/receive_data', {  // Include protocol and full route
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
